@@ -4,6 +4,10 @@
 // const root = document.getElementById("root");
 // root.appendChild(heading)
 
-const heading = React.createElement("h1",{},"Hello World from React!");
+const heading = React.createElement("h1", {}, "Hello World from React!");
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading)
+let parent = React.createElement("div", { id: "heading" }, [
+    React.createElement("h1", { class: "name" }, "React"),
+    React.createElement("h1",{class:"name"},"18")
+])
+root.render(parent)
